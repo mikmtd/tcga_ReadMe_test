@@ -27,6 +27,10 @@ RDF-config is a tool to generate SPARQL queries, a schema diagram, and files req
 
 ## USAGE
 
+### convert.yaml
+
+![tcga convert.yaml](./doc/figure/convert.yaml.png)
+
 ### Installation
 
 ```
