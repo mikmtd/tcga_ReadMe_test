@@ -41,7 +41,7 @@ RDF-config is a tool to generate SPARQL queries, a schema diagram, and files req
 Define rules (procedures) for generating RDF and JSON-LD from CSV and TSV files, and describe them in YAML format.
 
 Tips
-- The top-level key (e.g., IcgaFiles:) should be defined as a list item by adding a '-'.
+- The top-level key (e.g., TcgaFiles:) should be defined as a list item by adding a '-'.
 - Indentation should be done with exactly 2 half-width spaces.
 - Include - subject and - objects.
 - Confirm the path for - source. 
