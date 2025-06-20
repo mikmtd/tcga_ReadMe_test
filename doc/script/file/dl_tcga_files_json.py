@@ -2,7 +2,7 @@ import requests
 import json
 
 # 保存先ファイル（適宜変更）
-output_file = "./config/tcga/file/files.tcga.all.json"
+output_file = "/Users/mmatsuda/Desktop/clinical_from_Project/ALL最終確認/file/files.tcga.all.json"
 
 # TCGAプロジェクトリスト（33プロジェクト）（適宜変更）
 tcga_projects = [

@@ -23,7 +23,7 @@ These are generated from **simple YAML configuration files**.
 
 📘 For YAML syntax and configuration rules, see the RDF-config Specification:
 
-[English](https://github.com/dbcls/rdf-config/blob/master/doc/spec.md) | [Japanese version](https://github.com/dbcls/rdf-config/blob/master/doc/spec_ja.md)
+[English](https://github.com/dbcls/rdf-config/blob/master/doc/spec.md) | [Japanese](https://github.com/dbcls/rdf-config/blob/master/doc/spec_ja.md)
 
 ### Installation of rdf-config
 
@@ -61,7 +61,11 @@ Click on 11,428 CASES to explore cohort details (⑤).
 
 1. Click "713,891 Files" → "Download Manifest" (⑥).
 
-2. Use the following script to add the mani_ prefix to each column.
+The downloaded file will be named something like gdc_manifest.YYYY-MM-DD.hhmmss.txt.
+
+(e.g., gdc_manifest.2025-06-20.143000.txt).
+
+2. Use the following script to add the "mani_" prefix to each column.
 
 ```
 python3 add_manifest_prefix.py
@@ -71,7 +75,7 @@ python3 add_manifest_prefix.py
 
 #### sample.tsv (Biospecimen)
 
-1. Click Biospecimen → Download JSON (⑦).
+1. Click "Biospecimen" → Download "JSON" (⑦).
 
 2. Convert the JSON to TSV with smpl_ prefixes:
 
@@ -101,7 +105,7 @@ python3 json_to_files_tsv.py files.tcga.all.json > files.tsv
 
 #### clinical.tsv
 
-1. Download Clinical data in both TSV and JSON formats (⑨).
+1. Download Clinical data in both "TSV" and "JSON" formats (⑨).
 
 2. Compare Missing Fields
 
@@ -124,15 +128,15 @@ python3 clinical_add_pathology_fields.py
 * **Output**: `clinical_expanded_final.tsv`
 
 ```
-***Key Operations in*** `clinical_add_pathology_fields.py`:
-    - Strip "cases." prefix from case_id
-    - Extract missing fields (assign None if not found)
+Key Operations in `clinical_add_pathology_fields.py`:
+    - Strip `cases.` prefix from `case_id`
+    - Extract missing fields (assign `None` if not found)
     - Alphabetically sort additional fields
-    - Append fields without duplicating case_id
-    - Rename: clin_ + last key in path
-        - If conflict: use full path with _
-    - Replace "--" with an empty string
-    - Add fields like clin_case_id___hoge for uniqueness   
+    - Append fields without duplicating `case_id`
+    - **Rename**: `clin_` + last key in path
+        - If conflict: use full path with `_`
+    - Replace `--` with an empty string
+    - Add fields like `clin_case_id___hoge` for uniqueness   
 ```
 
 ## Update RDF Conversion Configurations
@@ -140,7 +144,7 @@ python3 clinical_add_pathology_fields.py
 ### 1. Edit Field Types
 
 ```
-python3 convert_rule_list.py`
+python3 convert_rule_list.py
 ```
 
 * **Output**: `rule_list.tsv`
@@ -162,7 +166,7 @@ Replace the clinical section in the main `convert.yaml` with the updated rules.
 ### 3. Update model.yaml
 
 ```
-python3 `generate_model_yaml.py`
+python3 generate_model_yaml.py
 ```
 
 * **Output**: `clinical_model.yaml`
@@ -184,7 +188,7 @@ Ensure the following files exist in config/tcga/:
 
 ### RDF/JSON-LD Conversion Commands
 
-    💡 Note: Run from the root directory of rdf-config.
+💡 Note: Run from the root directory of rdf-config.
 
 Convert TSV to Turtle:
 ```
@@ -235,7 +239,7 @@ bundle exec rdf-config --config config/tcga --schema > tcga.svg
 
 ### Tips for Writing convert.yaml
 
-- Always use a hyphen (-) before top-level entities (e.g., - TcgaFiles:)
+- Always use a hyphen `-` before **top-level** entities (e.g., `- TcgaFiles:`)
 - Use 2 spaces (not tabs) for indentation
 - Define - subject: and - objects: under each entity
 
