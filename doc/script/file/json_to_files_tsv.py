@@ -40,3 +40,4 @@ if __name__ == "__main__":
         print("Usage: python3 json_to_files_tsv.py <input_json_file>")
         sys.exit(1)
     main(sys.argv[1])
+

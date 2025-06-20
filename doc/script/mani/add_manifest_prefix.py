@@ -1,9 +1,9 @@
 import pandas as pd
 
 # 入力ファイル名(適宜変更)
-input_file = './config/tcga/mani/gdc_manifest.2025-06-09.154655.txt'
+input_file = '/Users/mmatsuda/Desktop/clinical_from_Project/ALL最終確認/Mani/gdc_manifest.2025-06-19.102027.txt'
 # 出力ファイル名
-output_file = './config/tcga/gdc_manifest.2025-06-04.tsv'
+output_file = '/Users/mmatsuda/Desktop/clinical_from_Project/ALL最終確認/Mani/gdc_manifest.2025-06-19.tsv'
 
 # ファイルを読み込む（タブ区切りを仮定）
 df = pd.read_csv(input_file, sep='\t')

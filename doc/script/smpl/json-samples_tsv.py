@@ -2,8 +2,8 @@ import json
 import pandas as pd
 
 # ファイルパス設定(適宜変更)
-json_file = "./config/tcga/smpl/biospecimen.cohort.2025-06-09.json"
-output_file = "./config/tcga/samples.tsv"
+json_file = "/Users/mmatsuda/Desktop/clinical_from_Project/ALL最終確認/smpl/biospecimen.cohort.2025-06-19.json"
+output_file = "/Users/mmatsuda/Desktop/clinical_from_Project/ALL最終確認/smpl/sample.tsv"
 
 # 欲しいフィールド一覧
 FIELDS = [
