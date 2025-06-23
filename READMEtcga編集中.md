@@ -6,7 +6,8 @@ The Cancer Genome Atlas (TCGA) provides large-scale genetic data to study cancer
 
 ## RDF Conversion with RDF-config
 
-Install **rdf-config** and use it to download and convert TCGA data into RDF (Turtle) or JSON-LD format.
+Install **rdf-config** to convert TCGA data into RDF (Turtle) or JSON-LD.
+Download the data separately.
 
 ### About RDF-config (senbero)
 
@@ -27,15 +28,17 @@ These are generated from **simple YAML configuration files**.
 
 ### Installation of rdf-config
 
+💡 Run the following commands in your working directory (e.g., ~/rdf-config/):
+
 ```
 git clone https://github.com/dbcls/rdf-config.git
 cd rdf-config
 bundle install
 ```
 
-## Download and Format TCGA Dataset
+## Download and TCGA Datasets
 
-⚠️Save all `.tsv` files into: rdf-config/config/tcga.
+⚠️Save all `.tsv` files into: `rdf-config/config/tcga`.
 
 ### Step I: Define Your Cohort on GDC
 
@@ -133,7 +136,7 @@ Key Operations in `clinical_add_pathology_fields.py`:
     - Extract missing fields (assign `None` if not found)
     - Alphabetically sort additional fields
     - Append fields without duplicating `case_id`
-    - **Rename**: `clin_` + last key in path
+    - Rename: `clin_` + last key in path
         - If conflict: use full path with `_`
     - Replace `--` with an empty string
     - Add fields like `clin_case_id___hoge` for uniqueness   
@@ -241,8 +244,20 @@ bundle exec rdf-config --config config/tcga --schema > tcga.svg
 
 - Always use a hyphen `-` before **top-level** entities (e.g., `- TcgaFiles:`)
 - Use 2 spaces (not tabs) for indentation
-- Define - subject: and - objects: under each entity
-
-- Ensure source: matches the TSV file field name
+- Define `- subject:` and `- objects:` under each entity
+- Ensure `source:` matches the TSV file field name
 
 ![tcga convert.yaml](./doc/figure/convert.yaml.png)
+
+### Generate Sample Data for Testing
+You can create a small subset of the TSV data to test RDF conversion using:
+
+```
+python3 ./generate_tcga_small_data.py
+```
+
+**output_file**
+- small_manifest.tsv
+- small_sample.tsv
+- small_files.tsv
+- small_clinical.tsv
