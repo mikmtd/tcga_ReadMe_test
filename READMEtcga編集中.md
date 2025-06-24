@@ -122,6 +122,10 @@ python3 compare_column_2.py
 
 3. Add missing fields to TSV
 
+To update the additional_fields in the `clinical_add_pathology_fields.py` script, use the contents of the `gdc_additional_fields_output.txt` file.
+
+![add_missing_field.png](./doc/figure/add_missing_field.png)
+
 Use:
 
 ```
