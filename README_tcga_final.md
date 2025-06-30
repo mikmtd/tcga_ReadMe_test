@@ -162,7 +162,7 @@ The following schema files are downloaded from the [GDC Dictionary GitHub reposi
 2. Data Type Mapping for Fields
 
 ```
-python3 ⭐︎import_yaml_New.py
+python3 import_yaml_New.py
 ```
 
 * **Output**: 
