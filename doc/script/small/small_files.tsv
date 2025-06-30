@@ -1,0 +1,4 @@
+file_id	file_name	file_size	data_type	data_category	data_format	experimental_strategy	platform	access	case_id	project_id
+fbb750a7-8577-4b74-985a-bc760cf5b296	TCGA_COAD.6e320dd2-e5de-42f1-bb87-078e81ac3bd3.wxs.Pindel.somatic_annotation.vcf.gz	1683797	Annotated Somatic Mutation	Simple Nucleotide Variation	VCF	WXS	Illumina	controlled	c46971a1-cbac-425d-bac2-f4142c92522e	TCGA-COAD
+ba66296a-74a2-486b-bdb6-2e40fcc75b03	TCGA_READ.67980eb1-db91-4f53-a55d-b30482e7ee20.wxs.Pindel.somatic_annotation.vcf.gz	136402	Annotated Somatic Mutation	Simple Nucleotide Variation	VCF	WXS	Illumina	controlled	c7162d11-4bdc-41cd-a964-46fc416829db	TCGA-READ
+88edcca8-97f0-4940-951e-93b13d72fc27	TCGA_SKCM.fc2036df-652d-4bc9-843a-b63b0aade4a0.wxs.VarScan2.somatic_annotation.vcf.gz	1990735	Annotated Somatic Mutation	Simple Nucleotide Variation	VCF	WXS	Illumina	controlled	ed471051-41dc-404c-87ec-db4a281ecfb5	TCGA-SKCM

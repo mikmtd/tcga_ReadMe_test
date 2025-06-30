@@ -1,0 +1,18 @@
+
+#tcgaf: <https://example.org/tcga/files/>
+tcgaf: <https://portal.gdc.cancer.gov/files/>
+# https://portal.gdc.cancer.gov/files/xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+tcgam: <https://example.org/tcga/manifest/>
+tcgac: <https://example.org/tcga/clinical/>
+tcgas: <https://example.org/tcga/sample/>
+
+#tcgaa: <https://example.org/tcga/case/>
+tcgaa: <https://portal.gdc.cancer.gov/cases/>
+# https://portal.gdc.cancer.gov/cases/xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+#tcgap: <https://example.org/tcga/project/>
+tcgap: <https://portal.gdc.cancer.gov/projects/>
+# https://portal.gdc.cancer.gov/projects/TCGA-xxxx
+
+

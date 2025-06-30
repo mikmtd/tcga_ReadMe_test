@@ -1,0 +1,4 @@
+mani_id	mani_filename	mani_md5	mani_size	mani_state
+fbb750a7-8577-4b74-985a-bc760cf5b296	TCGA_COAD.6e320dd2-e5de-42f1-bb87-078e81ac3bd3.wxs.Pindel.somatic_annotation.vcf.gz	5a088ecf0dc01e970136adc55de7ea6d	1683797	released
+ba66296a-74a2-486b-bdb6-2e40fcc75b03	TCGA_READ.67980eb1-db91-4f53-a55d-b30482e7ee20.wxs.Pindel.somatic_annotation.vcf.gz	ea862da7752b08bd991d62e1bd52eeb4	136402	released
+88edcca8-97f0-4940-951e-93b13d72fc27	TCGA_SKCM.fc2036df-652d-4bc9-843a-b63b0aade4a0.wxs.VarScan2.somatic_annotation.vcf.gz	d089c87b4e253148dc68bdf2049b2538	1990735	released
